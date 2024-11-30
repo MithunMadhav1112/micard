@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MiCard());
+  runApp(MiCard());
 }
 
 class MiCard extends StatelessWidget {
@@ -12,35 +12,86 @@ class MiCard extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         backgroundColor: Colors.teal,
-        body: SafeArea(
-          child: Row(
-            children: <Widget>[
-              Container(
-                color: Colors.red,
-                width: 100,
-              ),
-              const Spacer(),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Container(
-                    color: Colors.yellow,
-                    width: 100,
-                    height: 100,
+        body: Center(
+          child: SafeArea(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                const CircleAvatar(
+                  radius: 50.0,
+                  backgroundImage: AssetImage(
+                    'images/RRBPhoto.jpg',
                   ),
-                  Container(
-                    color: Colors.green,
-                    width: 100,
-                    height: 100,
+                ),
+                const Text(
+                  'Mithun Madhav',
+                  style: TextStyle(
+                    fontFamily: 'Pacifico',
+                    color: Colors.white,
+                    fontSize: 40,
                   ),
-                ],
-              ),
-              const Spacer(),
-              Container(
-                color: Colors.blue,
-                width: 100,
-              ),
-            ],
+                ),
+                const Text(
+                  'FLUTTER DEVELOPER',
+                  style: TextStyle(
+                    fontFamily: 'SourceSans3-Regular',
+                    fontSize: 20,
+                    color: Colors.white,
+                    letterSpacing: 5,
+                  ),
+                ),
+                const SizedBox(height: 10,),
+                Container(
+                  color: Colors.white,
+                  margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 20,),
+                  padding: const EdgeInsets.all(10.0),
+                  child: Row(
+                    children: <Widget>[
+                      const Icon(
+                        Icons.phone,
+                        color: Colors.teal,
+                      ),
+                      const SizedBox(
+                        width: 10,
+                      ),
+                      Text(
+                        '0000000000',
+                        style: TextStyle(
+                          fontFamily: 'Source Sans Pro',
+                          fontSize: 20,
+                          color: Colors.teal.shade900,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Container(
+                  color: Colors.white,
+                  margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 20,),
+                  padding: const EdgeInsets.all(10.0),
+                  child: Row(
+                    children: <Widget>[
+                      const Icon(
+                        Icons.email,
+                        color: Colors.teal,
+                      ),
+                      const SizedBox(
+                        width: 10,
+                      ),
+                      Text(
+                        '0000000000',
+                        style: TextStyle(
+                          fontFamily: 'Source Sans Pro',
+                          fontSize: 20,
+                          color: Colors.teal.shade900,
+                        ),
+                      ),
+                    ],
+
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ),
