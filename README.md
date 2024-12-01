@@ -1,6 +1,6 @@
 # micard
 
-A new Flutter project.
+A card UI created in Flutter
 
 ## Getting Started
 
