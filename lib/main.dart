@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MiCard());
+  runApp(const MiCard());
 }
 
 class MiCard extends StatelessWidget {
@@ -28,66 +28,63 @@ class MiCard extends StatelessWidget {
                   style: TextStyle(
                     fontFamily: 'Pacifico',
                     color: Colors.white,
-                    fontSize: 40,
+                    fontSize: 40.0,
                   ),
                 ),
                 const Text(
                   'FLUTTER DEVELOPER',
                   style: TextStyle(
                     fontFamily: 'SourceSans3-Regular',
-                    fontSize: 20,
+                    fontSize: 20.0,
                     color: Colors.white,
-                    letterSpacing: 5,
+                    letterSpacing: 5.0,
                   ),
                 ),
-                const SizedBox(height: 10,),
-                Container(
-                  color: Colors.white,
-                  margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 20,),
-                  padding: const EdgeInsets.all(10.0),
-                  child: Row(
-                    children: <Widget>[
-                      const Icon(
-                        Icons.phone,
-                        color: Colors.teal,
-                      ),
-                      const SizedBox(
-                        width: 10,
-                      ),
-                      Text(
-                        '0000000000',
-                        style: TextStyle(
-                          fontFamily: 'Source Sans Pro',
-                          fontSize: 20,
-                          color: Colors.teal.shade900,
-                        ),
-                      ),
-                    ],
+                SizedBox(
+                  height: 20.0,
+                  width: 150.0,
+                  child: Divider(
+                    color: Colors.teal.shade300,
                   ),
                 ),
-                Container(
-                  color: Colors.white,
-                  margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 20,),
-                  padding: const EdgeInsets.all(10.0),
-                  child: Row(
-                    children: <Widget>[
-                      const Icon(
-                        Icons.email,
-                        color: Colors.teal,
+                Card(
+                  margin: const EdgeInsets.symmetric(
+                    vertical: 10.0,
+                    horizontal: 50.0,
+                  ),
+                  child: ListTile(
+                    leading: const Icon(
+                      Icons.phone,
+                      color: Colors.teal,
+                    ),
+                    title: Text(
+                      '+91 xxx68xx6x8',
+                      style: TextStyle(
+                        fontFamily: 'Source Sans Pro',
+                        fontSize: 20.0,
+                        color: Colors.teal.shade900,
                       ),
-                      const SizedBox(
-                        width: 10,
+                    ),
+                  ),
+                ),
+                Card(
+                  margin: const EdgeInsets.symmetric(
+                    vertical: 10.0,
+                    horizontal: 50.0,
+                  ),
+                  child: ListTile(
+                    leading: const Icon(
+                      Icons.email,
+                      color: Colors.teal,
+                    ),
+                    title: Text(
+                      'mithun.madhav1112@gmai.com',
+                      style: TextStyle(
+                        fontFamily: 'Source Sans Pro',
+                        fontSize: 20.0,
+                        color: Colors.teal.shade900,
                       ),
-                      Text(
-                        '0000000000',
-                        style: TextStyle(
-                          fontFamily: 'Source Sans Pro',
-                          fontSize: 20,
-                          color: Colors.teal.shade900,
-                        ),
-                      ),
-                    ],
-
+                    ),
                   ),
                 ),
               ],
@@ -98,3 +95,28 @@ class MiCard extends StatelessWidget {
     );
   }
 }
+
+// Container(
+// color: Colors.white,
+// margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 20,),
+// padding: const EdgeInsets.all(10.0),
+// child: Row(
+// children: <Widget>[
+// const Icon(
+// Icons.phone,
+// color: Colors.teal,
+// ),
+// const SizedBox(
+// width: 10,
+// ),
+// Text(
+// '0000000000',
+// style: TextStyle(
+// fontFamily: 'Source Sans Pro',
+// fontSize: 20,
+// color: Colors.teal.shade900,
+// ),
+// ),
+// ],
+// ),
+// ),
